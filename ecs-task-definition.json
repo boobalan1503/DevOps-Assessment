@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:408881309070:task-definition/dev:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:408881309070:task-definition/notification:1",
     "containerDefinitions": [
         {
             "name": "notification",
-            "image": "408881309070.dkr.ecr.us-east-1.amazonaws.com/doc-repo",
+            "image": "408881309070.dkr.ecr.us-east-1.amazonaws.com/notification",
             "cpu": 0,
             "portMappings": [
                 {
@@ -24,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/dev",
+                    "awslogs-group": "/ecs/notification",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -33,7 +33,7 @@
             "systemControls": []
         }
     ],
-    "family": "dev",
+    "family": "notification",
     "taskRoleArn": "arn:aws:iam::408881309070:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::408881309070:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
@@ -83,7 +83,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-06-04T16:58:23.554Z",
+    "registeredAt": "2024-06-05T08:33:03.693Z",
     "registeredBy": "arn:aws:iam::408881309070:root",
     "tags": []
 }
